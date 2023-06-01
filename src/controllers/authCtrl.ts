@@ -92,7 +92,6 @@ const authCtrl ={
     posts: async(req: Request, res: Response) => {
         try {
             fs.readdir('./src/images', function (err, imageFiles) {
-                console.log(imageFiles);
                 if (err) {
                     res.status(500).json({ message: 'Failed to read images directory' });
                 } else {
